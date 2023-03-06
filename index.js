@@ -7,7 +7,7 @@ const loadUsers = async () => {
   const {
     data: { results },
   } = await http.get(
-    "?results=50&seed=fdpog&page=22nat=us&inc=gender,name,email,dob"
+    "?results=50&seed=ypmng&page=4nat=us&inc=gender,name,email,dob"
   );
   return results;
 };
@@ -19,9 +19,7 @@ const config = {
   password: "postgres",
   database: "pg_client",
 };
-// const mapUsers=(users)=>{
-//   return users.map({name:{first, last},email,gender,dob:{date}}) => `('${first}', '${last}','${email}', '${gender==='male', '${date}', '${_.random(0.5,2.4)}'}')`.join(',');
-// }
+
 const mapUsers = (users) => {
   return users
     .map(
