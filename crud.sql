@@ -36,7 +36,7 @@ SELECT * FROM "users";
 
 
 DELETE FROM "users"
-WHERE "id"=250
+WHERE "id"=242
 RETURNING *;
 
 UPDATE "users"
