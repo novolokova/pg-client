@@ -30,13 +30,11 @@ WHERE "name"= 'Маргарита';
 UPDATE "pizza"
 SET "diameter" = 30
 WHERE "id" = 4
---  поверніть усі оновлені данні ??? 
-RETURNING "diameter";
+RETURNING *;
 
 UPDATE "pizza"
 SET "price" = 130
 WHERE "price" > 100
---  поверніть усі оновлені данні ??? 
 RETURNING *;
 
 UPDATE "pizza"
@@ -80,7 +78,7 @@ WHERE "diameter" = 22 AND "price" < 150;
 
 SELECT * 
 FROM "pizza"
-WHERE ("diameter" > 25 AND "diameter" < 33) AND "price" > 100 AND "price" < 200;
+WHERE ("diameter" > 25 AND "diameter" < 33) OR "price" > 100 AND "price" < 200;
 
 SELECT * 
 FROM "pizza"
